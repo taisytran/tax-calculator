@@ -1,0 +1,31 @@
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+  TargetRubyVersion: 2.3
+
+Lint/BooleanSymbol:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+RSpec/PredicateMatcher:
+  EnforcedStyle: explicit
+
+Metrics/LineLength:
+  Max: 80
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Documentation:
+    Enabled: false
