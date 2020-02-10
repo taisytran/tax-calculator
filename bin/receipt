@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "thor"
+require "tax_calculator"
+
+class ReceiptCLI < Thor
+  desc "PRINT filename", "print receipt"
+  long_desc <<-CMD
+    Usage:
+      > bin/receipt input1
+  CMD
+  def print(filename)
+    p [:print]
+    TaxCalculator::Receipt.new(filename).print
+  end
+end
+
+ReceiptCLI.start
