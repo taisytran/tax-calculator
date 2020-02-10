@@ -31,7 +31,7 @@ module TaxCalculator
     end
 
     def attributes_as_csv
-      [quantity, product_name, " #{price_post_tax}"].to_csv
+      [quantity, product_name, " #{format('%.2f', price_post_tax)}"].to_csv
     end
 
     private
